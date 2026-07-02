@@ -44,14 +44,3 @@ struct tcpheader {
     u_short tcp_sum;                 /* checksum */
     u_short tcp_urp;                 /* urgent pointer */
 };
-
-/* Psuedo TCP header */
-struct pseudo_tcp
-{
-        unsigned saddr, daddr;
-        unsigned char mbz;
-        unsigned char ptcl;
-        unsigned short tcpl;
-        struct tcpheader tcp;
-        char payload[1500];
-};
